@@ -36,13 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
             feedbackDiv.textContent = "Registration successful!";
             feedbackDiv.style.color = "#28a745";
         } else {
-            for (let i = 0; i < messages.length; i++) {
-                if (i === 0) {
-                    feedbackDiv.innerHTML += `<div id="form-feedback">${messages[i]}</div>`;
-                } else {
-                    feedbackDiv.innerHTML += `<div id="form-feedback">${messages[i]}</div>`;
-                }
-            }
+            messages.join('br')
+            feedbackDiv.innerHTML = '';
             feedbackDiv.style.color = "#dc3545";
         }
 
